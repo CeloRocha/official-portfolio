@@ -1,0 +1,172 @@
+.about {
+
+    $card-background-color: #1A1B21;
+    $card-text-color: #FFF;
+    $card-subtitle-color: #F3BF99;
+    $card-footer-color: #060609;
+
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    color: $card-text-color;
+
+    .about-title{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 200px;
+        h2{
+            font-size: 32px;
+            font-weight: 700;
+        }
+        span{
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .separator{
+            position: relative;
+            height: 3px;
+            width: 100%;
+            border-radius: 3px;
+            background-color: $card-text-color;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 10px;
+                width: 35px;
+                border-radius: 5px;
+                background-color: $card-subtitle-color;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .about-box{
+        display: flex;
+        width: 60%;
+        height: 500px;
+        overflow: hidden;
+        box-shadow: 0 0 15px 3px #888;
+        background-color: $card-background-color;
+        aside, .about-info{
+            flex: 1;
+        }
+
+        aside{
+            img{
+                transform: translateY(-5%);
+                width: 100%;
+            }
+        }
+
+        .about-info{
+            font-weight: 400;
+            padding: 32px 0;
+            font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+            color: $card-text-color;
+            height: 436px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .about-content, .about-buttons{
+                padding: 0 32px;
+            }
+
+            .about-content{
+                line-height: 1.6em;
+                text-align: justify;
+                display: flex;
+                flex-direction: column;
+                .space{
+                    margin-top: 32px;
+                }
+                li{
+                    margin-left: 24px;
+                }
+            }
+            .about-buttons{
+                justify-self: flex-end;
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+
+                button{
+                    border: none;
+                    border-radius: 9999px;
+                    padding: 14px 48px;
+                    font-size: 12px;
+                    font-family: 'Inter';
+                    font-weight: 700;
+                    transition: 0.2s ease;
+                    background-color: $card-text-color;
+                    color: $card-background-color;
+
+                    &:hover{
+                        box-shadow: 0 0 0 3px #008FFF;
+                    }
+
+                    &.orange{
+                        background-color: $card-subtitle-color;
+
+                        &:hover{
+                            color: $card-text-color;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about.light{
+
+    $light-card-background-color: #F5F5F5;
+    $light-card-subtitle-color: #F47D27;
+    $light-card-text-color: #2B283A;
+    $light-card-footer-color: #D5D4D8;
+    color: $light-card-text-color;
+    .about-title{
+        .separator{
+            background-color: $light-card-text-color;
+
+            &::after{
+                background-color: $light-card-subtitle-color;
+            }
+        }
+    }
+
+    .about-box{
+        background-color: $light-card-background-color;
+
+        .about-info{
+            color: $light-card-text-color;
+            .about-buttons{
+
+                button{
+                    background-color: $light-card-text-color;
+                    color: $light-card-background-color;
+
+                    &.orange{
+                        background-color: $light-card-subtitle-color;
+
+                        &:hover{
+                            color: $light-card-text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

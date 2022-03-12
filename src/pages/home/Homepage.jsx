@@ -7,6 +7,7 @@ import facebookImg from '../../assets/Facebook.svg';
 import githubImg from '../../assets/GitHub.svg';
 import instagramImg from '../../assets/Instagram.svg';
 import linkedinImg from '../../assets/Linkedin.svg'
+import About from './components/About/About';
 
 const Homepage = (props) => {
   return (
@@ -44,6 +45,8 @@ const Homepage = (props) => {
                 </a>
             </div>
         </div>
+
+        <About lightMode={props?.lightMode} />
     </div>
   )
 }
