@@ -1,13 +1,22 @@
 .profile-card {
+
+    $card-background-color: #1A1B21;
+    $card-text-color: #FFF;
+    $card-subtitle-color: #F3BF99;
+    $card-footer-color: #060609;
     margin: auto;
     width: 240px;
-    background: #1A1B21;
+    box-shadow: 0 0 15px 3px #888;
+    background-color: $card-background-color;
     border-radius: 10px;
     font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
-    color: #FFF;
+    color: $card-text-color;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 400;
+    transition: background-color 1s ease,
+                color 0.5s ease;
 
     .profile-img {
         width: 100%;
@@ -21,48 +30,184 @@
             width: 100%;
 
         }
+
+        &::before, &::after{
+            transform: scaleX(0);
+            transition: 0.3s ease;
+        }
+
+        &::before{
+            content: 'Hire me!!!';
+            color: #FFF;
+            position: absolute;
+            padding: 6px;
+            background-color: #008FFF;
+            z-index: 1;
+            border-radius: 3px;
+            top: 32%;
+            left: 62%;
+            transform-origin: -15px 50%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-color: #008FFF;
+            z-index: 1;
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            top: 34.5%;
+            right: 37%;
+            transform-origin: left;
+        }
+        &:hover{
+            &::before, &::after{
+                transform: scaleX(1);
+            }
+        }
     }
     h1{
+        margin-top: 15px;
         font-size: 24px;
+        font-weight: 700;
     }
     h2{
         font-size: 13px;
-        color: #F3BF99;
+        color: $card-subtitle-color;
     }
     span{
+        margin-top: 6px;
         font-size: 10px;
     }
 
     .profile-email-button{
+        margin-top: 16px;
         width: 80%;
         display: flex;
+        padding: 6px 0;
+        gap: 6px;
         align-items: center;
         justify-content: center;
         background: #FFF;
+        color: #000;
         border-radius: 6px;
         border: 1px solid #D1D5DB;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+
+        .email-icon{
+            position: relative;
+            background-color: #FFF;
+            height: 9px;
+            border-radius: 0 0 2px 2px;
+            box-shadow: 0 0 1px 1px black inset;
+            width: 15px;
+            &::before, &::after{
+                content: '';
+                top: 0;
+                position: absolute;
+                width: 9px;
+                border-top: 1px solid #000;
+                transition: 0.5s ease;
+            }
+            &::before{
+                left: 0;
+                transform-origin: top left;
+                transform: rotateZ(30deg);
+            }
+
+            &::after {
+                right: 0;
+                transform-origin: top right;
+                transform: rotateZ(-30deg);
+            }
+        }
+
+        span {
+            margin: 0;
+            transition: 0.5s ease;
+            color: #000;
+            font-size: 13px;
+            font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+            font-weight: 500;
+        }
+
+        &:hover {
+            .email-icon{
+                &::before, &::after{
+                    border-top: 1px solid #000;
+                }
+
+                &::before{
+                    transform: rotateZ(-30deg);
+                }
+    
+                &::after {
+                    transform: rotateZ(30deg);
+                }
+            }
+        }
     }
+
     .profile-info {
         width: 80%;
         text-align: justify;
 
         h3{
             font-size: 16px;
+            margin-top: 16px;
+            font-weight: 700;
         }
         p{
+            margin-top: 5px;
             font-size: 10px;
         }
     }
 
     .profile-footer {
         width: 100%;
-        background: #161619;
+        margin-top: 16px;
+        background-color: $card-footer-color;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 24px;
         padding: 20px 0;
         border-radius: 0 0 10px 10px;
+        transition: background-color 1s ease;
+
+        a{
+            img{
+                border-radius: 6px;
+                background-color: transparent;
+                transition: background-color 0.5s ease;
+            }
+        }
+        a:hover{
+            img{
+
+                background-color: #008FFF;
+            }
+        }
+    }
+}
+
+.profile-card.light{
+    $light-card-background-color: #F5F5F5;
+    $light-card-subtitle-color: #F47D27;
+    $light-card-text-color: #2B283A;
+    $light-card-footer-color: #D5D4D8;
+
+    background-color: $light-card-background-color;
+    color: $light-card-text-color;
+
+    h2{
+        color: $light-card-subtitle-color;
+    }
+
+    .profile-footer {
+        background-color: $light-card-footer-color;
     }
 }
