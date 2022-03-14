@@ -1,19 +1,14 @@
+@import '../../../../styles/colors';
+
 .about {
-
-    $card-background-color: #1A1B21;
-    $card-text-color: #FFF;
-    $card-subtitle-color: #F3BF99;
-    $card-footer-color: #060609;
-
-    margin: 32px auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
     align-items: center;
-    color: $card-text-color;
+    color: $text-color;
 
     .about-title{
-
+        z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -32,7 +27,7 @@
             height: 3px;
             width: 100%;
             border-radius: 3px;
-            background-color: $card-text-color;
+            background-color: $text-color;
 
             &::after{
                 content: '';
@@ -40,7 +35,7 @@
                 height: 10px;
                 width: 35px;
                 border-radius: 5px;
-                background-color: $card-subtitle-color;
+                background-color: $subtitle-color;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -50,12 +45,14 @@
     }
 
     .about-box{
+        z-index: 1;
         display: flex;
-        width: 60%;
+        flex-direction: row-reverse;
+        width: 60vw;
         height: 500px;
         overflow: hidden;
-        box-shadow: 0 0 15px 3px #888;
-        background-color: $card-background-color;
+        box-shadow: 0 0 15px 3px #000;
+        background-color: $background-color;
         aside, .about-info{
             flex: 1;
         }
@@ -71,7 +68,7 @@
             font-weight: 400;
             padding: 32px 0;
             font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
-            color: $card-text-color;
+            color: $text-color;
             height: 436px;
 
             display: flex;
@@ -109,18 +106,18 @@
                     font-family: 'Inter';
                     font-weight: 700;
                     transition: 0.2s ease;
-                    background-color: $card-text-color;
-                    color: $card-background-color;
+                    background-color: $text-color;
+                    color: $background-color;
 
                     &:hover{
-                        box-shadow: 0 0 0 3px #008FFF;
+                        box-shadow: 0 0 0 3px $blue;
                     }
 
                     &.orange{
-                        background-color: $card-subtitle-color;
+                        background-color: $light-subtitle-color;
 
                         &:hover{
-                            color: $card-text-color;
+                            color: $text-color;
                             box-shadow: none;
                         }
                     }
@@ -131,41 +128,47 @@
 }
 
 .about.light{
-
-    $light-card-background-color: #F5F5F5;
-    $light-card-subtitle-color: #F47D27;
-    $light-card-text-color: #2B283A;
-    $light-card-footer-color: #D5D4D8;
-    color: $light-card-text-color;
+    color: $light-text-color;
     .about-title{
         .separator{
-            background-color: $light-card-text-color;
+            background-color: $light-text-color;
 
             &::after{
-                background-color: $light-card-subtitle-color;
+                background-color: $light-subtitle-color;
             }
         }
     }
 
     .about-box{
-        background-color: $light-card-background-color;
+        background-color: $light-background-color;
 
         .about-info{
-            color: $light-card-text-color;
+            color: $light-text-color;
             .about-buttons{
 
                 button{
-                    background-color: $light-card-text-color;
-                    color: $light-card-background-color;
+                    background-color: $light-text-color;
+                    color: $light-background-color;
 
                     &.orange{
-                        background-color: $light-card-subtitle-color;
+                        background-color: $light-subtitle-color;
 
                         &:hover{
-                            color: $light-card-text-color;
+                            color: $light-text-color;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .about{
+        .about-box{
+            width: 85%;
+            aside{
+                display: none;
             }
         }
     }

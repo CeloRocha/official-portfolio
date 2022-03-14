@@ -1,0 +1,51 @@
+@import '../../styles/colors';
+
+.section-title{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 200px;
+    color: $text-color;
+
+    h2{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    span{
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .separator{
+        position: relative;
+        height: 3px;
+        width: 100%;
+        border-radius: 3px;
+        background-color: $text-color;
+
+        &::after{
+            content: '';
+            display: block;
+            height: 10px;
+            width: 35px;
+            border-radius: 5px;
+            background-color: $subtitle-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.section-title.light{
+    color: $light-text-color;
+    .separator{
+        background-color: $light-text-color;
+
+        &::after{
+            background-color: $light-subtitle-color;
+        }
+    }
+}

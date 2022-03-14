@@ -2,15 +2,12 @@ import React from 'react'
 import './About.scss'
 
 import marceloImg from '../../../../assets/Foto.jpg';
+import SectionTitle from '../../../../components/sectionTitle/SectionTitle';
 
 const About = (props) => {
   return (
-    <section className={`about ${props?.lightMode ? 'light' : ''}`}>
-        <div className='about-title'>
-            <h2>About Me</h2>
-            <span>Why Choose Me?</span>
-            <div className='separator'></div>
-        </div>
+    <div className={`about ${props?.lightMode ? 'light' : ''} ${props.className}`}>
+        <SectionTitle lightMode={props.lightMode} title='About Me' subtitle='Why Choose Me?' />
         <div className='about-box'>
             <aside>
                 <img src={marceloImg} alt="" />
@@ -38,7 +35,7 @@ const About = (props) => {
                 </div>
             </div>
         </div>
-    </section>
+    </div>
   )
 }
 

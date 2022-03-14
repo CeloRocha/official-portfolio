@@ -1,0 +1,123 @@
+@import '../../styles/colors';
+
+.project-card {
+    position: relative;
+    background-color: $background-color;
+    width: 400px;
+    box-shadow: 0 0 15px 3px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+
+    .project-top, .project-bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .project-img{
+        aspect-ratio: 16/9;
+        width: 100%;
+    }
+
+
+    .separator {
+        width: 50%;
+        height: 2px;
+        background-color: $light-background-color;
+    }
+    .project-title{
+        text-align: center;
+        width: 70%;
+        color: $subtitle-color;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .project-description{
+        text-align: justify;
+        width: 85%;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .project-technologies{
+        display: flex;
+        width: 90%;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        span{
+            border-radius: 5px;
+            padding: 8px 8px;
+            background-color: $subtitle-color;
+        }
+    }
+    .project-links{
+
+        justify-items: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background-color: $footer-color;
+        width: 100%;
+        padding: 16px 0;
+        a{
+            width: 32px;
+            height: 32px;
+            transition: 0.5s ease;
+            img,svg{
+                height: 100%;
+                width: 100%;
+
+            }
+            svg{
+                border-radius: 4px;
+                background-color: #918E9B;
+            }
+            svg>path{
+                transition: 0.5s ease;
+                fill: $footer-color;
+            }
+
+            &:hover{
+                background-color: $blue;
+                svg>path{
+                    fill: $blue;
+                }
+            }
+        }
+    }
+
+}
+
+.project-card.light {
+    background-color: $light-background-color;
+
+    .separator{
+        background-color: $background-color;
+    }
+    .project-title{
+        color: $light-subtitle-color;
+    }
+    .project-description{
+        color: $light-text-color;
+    }
+    .project-technologies > span {
+        background-color: $light-subtitle-color;
+    }
+    .project-links{
+        background-color: $light-footer-color;
+        a>svg>path{
+            fill: $light-footer-color;     
+        }
+        a:hover>svg>path{
+            fill: $blue;     
+        }
+    }
+}

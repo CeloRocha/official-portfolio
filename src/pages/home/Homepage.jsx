@@ -1,4 +1,5 @@
-import React from 'react'
+
+import {useState} from 'react';
 import './Homepage.scss'
 //Import Images
 import marceloImg from '../../assets/Foto.jpg'
@@ -8,45 +9,65 @@ import githubImg from '../../assets/GitHub.svg';
 import instagramImg from '../../assets/Instagram.svg';
 import linkedinImg from '../../assets/Linkedin.svg'
 import About from './components/About/About';
+import Profile from '../../components/profile/Profile';
+import SectionTitle from '../../components/sectionTitle/SectionTitle';
+
+
+//Import projects helper ( array of objects)
+import projects from '../../helper/projects';
+import Project from '../../components/project/Project';
 
 const Homepage = (props) => {
-  return (
-    <div>
-        <div className={`profile-card ${props?.lightMode ? 'light' : ''} ${props.className}`}>
-            <div className='profile-img'>
-                <img src={marceloImg} alt="Marcelo Rocha"/>
-            </div>
-            <h1>Marcelo Rocha</h1>
-            <h2>Frontend Developer</h2>
-            <span>marcelorocha.website</span>
-            <button className='profile-email-button'>
-                <div className='email-icon'></div>
-                {/* <img src={emailImg} alt="" /> */}
-                <span>Email</span>
-            </button>
-            {/* <section className="profile-info">
-                <h3>About</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, tenetur. Vel quos explicabo iusto! Dolorem eligendi, nisi excepturi tempora culpa fugiat, hic asperiores aliquam mollitia vero animi, a numquam saepe?</p>
-                <h3>Interests</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt id atque pariatur laboriosam, animi tenetur suscipit. Odit molestias dolores blanditiis iure, reprehenderit odio debitis, repellendus, dolore eius deleniti voluptas laborum!</p>
-            </section> */}
-            <div className='profile-footer'>
-                <a href="https://www.facebook.com/marcelo.rocha.33671" target='_blank'>
-                    <img src={facebookImg} alt="Facebook" />
-                </a>
-                <a href="https://www.instagram.com/marcelo.ds.rocha/" target='_blank'>
-                    <img src={instagramImg} alt="Instagram" />
-                </a>
-                <a href="https://www.linkedin.com/in/marcelo-rocha-091b551bb/" target='_blank'>
-                    <img src={linkedinImg} alt="Linkedin" />
-                </a>
-                <a href="https://github.com/CeloRocha" target='_blank'>
-                    <img src={githubImg} alt="GitHub" />
-                </a>
-            </div>
-        </div>
 
-        <About lightMode={props?.lightMode} />
+    const [ lightMode, setLightMode ] = useState(false)
+
+  return (
+    <div className={`homepage ${lightMode ? 'light' : ''}`}>
+         <header className={`navbar ${lightMode ? 'light' : ''}`}>
+            <h1>Marcelo Rocha</h1>
+            <nav>
+                <span>
+                    About
+                </span>
+            </nav>
+            <button className='change-mode-button' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
+        </header>
+        <section className='section-1'>
+            <aside>
+                <Profile lightMode={lightMode}/>
+            </aside>
+            <div className='content'>
+                <h2>
+                    Seja Bem Vindo Ao Meu Portfólio
+                </h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora illo, inventore pariatur dolores quam aliquid culpa optio qui saepe delectus architecto esse nobis nisi facilis. Nobis explicabo mollitia soluta? Culpa.
+                </p>
+            </div>
+        </section>
+        <main>
+            <section>
+            
+            <About lightMode={lightMode} className='pt-5'/>
+            {/* <div class="wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div> */}
+            </section>
+            <section className='projects-section pt-4'>
+                <SectionTitle lightMode={lightMode} title='Projects' />
+                <div className='projects'>
+                    {projects.map((project, index) => {
+                        return(
+                            <Project
+                                {...project} lightMode={lightMode}
+                            />
+                        )
+                    })}
+                </div>
+            </section>
+        </main>
     </div>
   )
 }

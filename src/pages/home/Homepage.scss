@@ -1,213 +1,178 @@
-.profile-card {
+@import '../../styles/colors';
 
-    $card-background-color: #1A1B21;
-    $card-text-color: #FFF;
-    $card-subtitle-color: #F3BF99;
-    $card-footer-color: #060609;
-    margin: auto;
-    width: 240px;
-    box-shadow: 0 0 15px 3px #888;
-    background-color: $card-background-color;
-    border-radius: 10px;
-    font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
-    color: $card-text-color;
+
+.navbar{
+    z-index: 2;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-weight: 400;
-    transition: background-color 1s ease,
-                color 0.5s ease;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: $blue;
+    // background-color: rgba($color: $light-background-color, $alpha: 0.8);
+    padding: 6px 0;
+    transition: 1s ease;
+    color: $text-color;
 
-    .profile-img {
-        width: 100%;
-        height: 240px;
-        overflow: hidden;
+    h1{
+        margin-left: 32px;
+        font-family: 'Inter', 'Georgia', sans-serif;
+        color: $text-color;
+    }
+
+    .change-mode-button{
         position: relative;
-        border-radius: 10px 10px 0 0;
-        img{
-            top: -20%;
-            position: absolute;
-            width: 100%;
-
-        }
-
-        &::before, &::after{
-            transform: scaleX(0);
-            transition: 0.3s ease;
-        }
-
-        &::before{
-            content: 'Hire me!!!';
-            color: #FFF;
-            position: absolute;
-            padding: 6px;
-            background-color: #008FFF;
-            z-index: 1;
-            border-radius: 3px;
-            top: 32%;
-            left: 62%;
-            transform-origin: -15px 50%;
-        }
+        width: 48px;
+        height: 16px;
+        margin-right: 32px;
+        background-color: $background-color;
+        border-radius: 999px;
+        border: none;
+        transition: background-color 0.5s ease;
         &::after{
             content: '';
             position: absolute;
-            height: 15px;
-            width: 15px;
-            background-color: #008FFF;
-            z-index: 1;
-            clip-path: polygon(0 50%, 100% 100%, 100% 0);
-            top: 34.5%;
-            right: 37%;
-            transform-origin: left;
-        }
-        &:hover{
-            &::before, &::after{
-                transform: scaleX(1);
-            }
-        }
-    }
-    h1{
-        margin-top: 15px;
-        font-size: 24px;
-        font-weight: 700;
-    }
-    h2{
-        font-size: 13px;
-        color: $card-subtitle-color;
-    }
-    span{
-        margin-top: 6px;
-        font-size: 10px;
-    }
-
-    .profile-email-button{
-        margin-top: 16px;
-        width: 80%;
-        display: flex;
-        padding: 6px 0;
-        gap: 6px;
-        align-items: center;
-        justify-content: center;
-        background: #FFF;
-        color: #000;
-        border-radius: 6px;
-        border: 1px solid #D1D5DB;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-        font-weight: 500;
-        transition: background-color 0.5s ease;
-        cursor: pointer;
-
-        .email-icon{
-            position: relative;
-            background-color: #FFF;
-            height: 9px;
-            border-radius: 0 0 2px 2px;
-            box-shadow: 0 0 1px 1px black inset;
-            width: 15px;
-            &::before, &::after{
-                content: '';
-                top: 0;
-                position: absolute;
-                width: 9px;
-                border-top: 1px solid #000;
-                transition: 0.5s ease;
-            }
-            &::before{
-                left: 0;
-                transform-origin: top left;
-                transform: rotateZ(30deg);
-            }
-
-            &::after {
-                right: 0;
-                transform-origin: top right;
-                transform: rotateZ(-30deg);
-            }
-        }
-
-        span {
-            margin: 0;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            background-color: $background-color;
+            box-shadow: 0 0 2px 2px #888;
+            transform: translate(-24px, -50%);
             transition: 0.5s ease;
-            color: #000;
-            font-size: 13px;
-            font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
-            font-weight: 500;
-        }
-
-        &:hover {
-            .email-icon{
-                &::before, &::after{
-                    border-top: 1px solid #000;
-                }
-
-                &::before{
-                    transform: rotateZ(-30deg);
-                }
-    
-                &::after {
-                    transform: rotateZ(30deg);
-                }
-            }
         }
     }
+    
+    
+}
 
-    .profile-info {
-        width: 80%;
-        text-align: justify;
+.section-1{
+    position: relative;
+    z-index: 1;
+    padding-top: 32px;
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $blue;
 
-        h3{
-            font-size: 16px;
-            margin-top: 16px;
-            font-weight: 700;
+        .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 40vw;
+        align-items: center;
+        color: $text-color;
+        gap: 16px;
+        font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+
+        h2{
+            text-align: center;
+            font-size: 48px;
         }
         p{
-            margin-top: 5px;
-            font-size: 10px;
+            font-size: 20px;
+            text-align: justify;
         }
     }
 
-    .profile-footer {
+    &::after{
+        content: '';
+        z-index: -1;
+        position: absolute;
         width: 100%;
-        margin-top: 16px;
-        background-color: $card-footer-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 20px 0;
-        border-radius: 0 0 10px 10px;
-        transition: background-color 1s ease;
+        height: 240px;
+        border-radius: 50%;
+        top: 100%;
+        background-color: $blue;
+        transform: translateY(-50%);
+    }
+}
 
-        a{
-            img{
-                border-radius: 6px;
-                background-color: transparent;
-                transition: background-color 0.5s ease;
-            }
-        }
-        a:hover{
-            img{
 
-                background-color: #008FFF;
-            }
+
+.navbar.light{
+    // background-color: rgba($color: $background-color, $alpha: 0.8);
+    color: $text-color;
+
+    h1{
+        color: $text-color;
+    }
+    .change-mode-button{
+        background-color: $light-background-color;
+    
+        &::after{
+            left: auto;
+            transform: translate(0px, -50%);
+            background-color: $light-background-color;
         }
     }
 }
 
-.profile-card.light{
-    $light-card-background-color: #F5F5F5;
-    $light-card-subtitle-color: #F47D27;
-    $light-card-text-color: #2B283A;
-    $light-card-footer-color: #D5D4D8;
+.homepage{
+    padding-bottom: 32px;
+    transition: background-color 1s ease;
+    background-color: #23252C;
+  }
+  
+  .homepage.light{
+  
+    background-color: #DDD;
+}
 
-    background-color: $light-card-background-color;
-    color: $light-card-text-color;
+main{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    h2{
-        color: $light-card-subtitle-color;
+.projects-section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    align-items: center;
+
+    .projects{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 32px;
+        
     }
+}
 
-    .profile-footer {
-        background-color: $light-card-footer-color;
+.wave {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 245px;
+}
+
+.wave .shape-fill {
+    fill: $blue;
+}
+
+@media only screen and (max-width: 600px){
+    .section-1{
+        flex-direction: column;
+        gap: 32px;
+
+        .content{
+            max-width: 70vw;
+        }
     }
 }
