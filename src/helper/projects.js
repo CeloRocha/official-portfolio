@@ -10,7 +10,7 @@ const projects = [
     {
         image: cramsGamesImg,
         title: 'Crams Games',
-        description: 'Um site de jogos online para jogar com os amigos, tem tabela de lideres, salva sua vitórias, tem lobby com bate-papo e um jogo baseado em turnos.',
+        description: 'Um site de jogos online para jogar e se divertir com os amigos, tem tabela de lideres, salva suas vitórias, tem lobby com bate-papo e um jogo baseado em turnos.',
         english: 'A gaming site for playing with your friends, with leaderboard, victory counter, lobby, chat and turn based game.',
         technologies: ['ReactJS', 'Firebase', 'React-Router', 'Responsive'],
         github: 'https://github.com/CeloRocha/gaming-site',
@@ -19,7 +19,7 @@ const projects = [
     {
         image: letMeAskImg,
         title: 'LetMe Ask',
-        description: 'Um site para ajudar durante aulas online, criando uma sala onde os usuários podem fazer suas perguntas e marcarem como gostei as mais interessantes, nas quais o professor poderá responder a com mais alunos interessados.',
+        description: 'Um site para proporcionar uma melhor interação durante aulas online, criando uma sala onde os alunos podem fazer suas perguntas e marcarem as mais interessantes, nas quais o professor poderá responder em ordem de interesse.',
         english: 'A helpful site for answer the most desired questions during a stream.',
         technologies: ['ReactJS', 'Firebase', 'React-Router'],
         github: 'https://github.com/CeloRocha/let-me-ask',
@@ -28,7 +28,7 @@ const projects = [
     {
         image: quizAppImg,
         title: 'Quizzical',
-        description: 'Usando a API do Open Trivia DB (OTDB), foi o meu primeiro projeto com ReactJS, utilizando componentes e buscando dados online.',
+        description: 'Um site para testar seu conhecimento, veja se é capaz de acertar 100%. Usando a API do Open Trivia DB (OTDB), foi o meu primeiro projeto com ReactJS, utilizando componentes e buscando dados online.',
         english: 'Using the Open Trivia DB (OTDB), this site is my first ReactJS project, using a API to fecth data.',
         technologies: ['ReactJS', 'OTDB'],
         github: 'https://github.com/CeloRocha/react-quiz-app',

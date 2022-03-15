@@ -40,9 +40,9 @@
 
     .contact-form{
         width: max(400px, 50%);
-        margin: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 16px;
 
         input, textarea {
@@ -102,3 +102,8 @@
     }
 }
 
+@media only screen and (max-width: 641px){
+    .contact>.contact-form{
+        width: 95%;
+    }
+}
