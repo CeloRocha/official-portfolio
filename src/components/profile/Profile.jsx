@@ -17,11 +17,11 @@ const Profile = (props) => {
         <h1>Marcelo Rocha</h1>
         <h2>Frontend Developer</h2>
         <span>marcelorocha.website</span>
-        <button className='profile-email-button'>
+        <a className='profile-email-button' href="mailto:marcelo.ds.rocha77@gmail.com" target='_blank' referrerPolicy='no-referrer'>
             <div className='email-icon'></div>
             {/* <img src={emailImg} alt="" /> */}
             <span>Email</span>
-        </button>
+        </a>
         {/* <section className="profile-info">
             <h3>About</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, tenetur. Vel quos explicabo iusto! Dolorem eligendi, nisi excepturi tempora culpa fugiat, hic asperiores aliquam mollitia vero animi, a numquam saepe?</p>

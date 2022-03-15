@@ -1,0 +1,104 @@
+@import '../../../../styles/colors';
+
+.contact{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 64px;
+    width: 80vw;
+    .contact-options{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: space-evenly;
+        align-items: center;
+        .contact-option{
+            width: 100%;
+            color: $text-color;
+            box-shadow: 0 0 15px 3px #000;
+            background-color: $blue;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a{
+                display: flex;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                    color: $light-subtitle-color;
+                }
+            }
+        }
+    }
+
+    .contact-form{
+        width: max(400px, 50%);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        input, textarea {
+            background-color: $background-color;
+            color: $text-color;
+            border: 2px solid $blue;
+            padding: 16px;
+            border-radius: 16px;
+            width: 100%;
+            box-shadow: 0 0 15px 3px #000;
+            outline: none;
+            resize: none;
+            &::placeholder{
+                color: #888;
+                opacity: 1;
+            }
+        }
+        button{
+            background-color: $light-subtitle-color;
+            border: none;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            align-self: flex-start;
+            border-radius: 9999px;
+            color: $light-text-color;
+            padding: 8px 24px;
+            transition: 0.3s;
+
+            svg{
+                height: 16px;
+                width: 28px;
+
+                path{
+                    transition: 0.3s;
+                    fill: $light-text-color;
+                }
+            }
+            &:hover{
+                color: $text-color;
+                svg>path{
+                    fill: $text-color;
+                }
+            }
+        }
+        
+    }
+}
+
+.contact.light {
+    .contact-form{
+        input, textarea{
+            background-color: $light-background-color;
+            color: $light-text-color;
+        }
+    }
+}
+

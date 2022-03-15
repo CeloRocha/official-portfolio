@@ -18,10 +18,13 @@ import SectionTitle from '../../components/sectionTitle/SectionTitle';
 import projects from '../../helper/projects';
 import Project from '../../components/project/Project';
 import Experience from './components/Experience/Experience';
+import Contact from './components/Contact/Contact';
 
 const Homepage = (props) => {
 
     const [ lightMode, setLightMode ] = useState(false);
+    const [ mobileNavOpened, setMobileNavOpened ] = useState(false);
+
     const topRef = useRef();
     const aboutRef = useRef();
     const projectsRef = useRef();
@@ -30,21 +33,32 @@ const Homepage = (props) => {
 
     function goToRef(ref){
         ref.current.scrollIntoView({behavior: 'smooth'})
+        setMobileNavOpened(false)
     }
+
+
 
   return (
     <div className={`homepage ${lightMode ? 'light' : ''}`}>
          <header ref={topRef} className={`navbar ${lightMode ? 'light' : ''}`}>
             <h1>Marcelo Rocha</h1>
-            <nav>
-                <button onClick={()=>goToRef(aboutRef)}>About</button>
-                <button onClick={()=>goToRef(projectsRef)}>Projects</button>
-                <button onClick={()=>goToRef(experiencesRef)}>Experience</button>
-                <button onClick={()=>goToRef(contactRef)}>Get In Touch</button>
+            <nav className='nav-desktop'>
+                <button onClick={()=>goToRef(aboutRef)}>Sobre</button>
+                <button onClick={()=>goToRef(projectsRef)}>Projetos</button>
+                <button onClick={()=>goToRef(experiencesRef)}>Experiência</button>
+                <button onClick={()=>goToRef(contactRef)}>Contate-me</button>
             </nav>
             <button className='change-mode-button' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
+            <button className={`nav-hamburguer ${mobileNavOpened ? 'open' : ''}`} onClick={()=>setMobileNavOpened(prev => !prev)}></button>
+            <nav className={`nav-mobile ${mobileNavOpened ? 'open' : ''}`}>
+                <button onClick={()=>goToRef(topRef)}>Início</button>
+                <button onClick={()=>goToRef(aboutRef)}>Sobre</button>
+                <button onClick={()=>goToRef(projectsRef)}>Projetos</button>
+                <button onClick={()=>goToRef(experiencesRef)}>Experiência</button>
+                <button onClick={()=>goToRef(contactRef)}>Entre em Contato</button>
+            </nav>
         </header>
-        <section className='section-1'>
+        <section className='section-1' ref={topRef}>
             <aside>
                 <Profile lightMode={lightMode}/>
             </aside>
@@ -80,6 +94,7 @@ const Homepage = (props) => {
             </section>
             <section className='pt-4'>
                 <SectionTitle reference={contactRef} lightMode={lightMode} title='Entre em Contato' />
+                <Contact lightMode={lightMode}/>
             </section>
         </main>
     </div>

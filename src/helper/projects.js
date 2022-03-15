@@ -10,7 +10,8 @@ const projects = [
     {
         image: cramsGamesImg,
         title: 'Crams Games',
-        description: 'A gaming site for playing with your friends, with leaderboard, victory counter, lobby, chat and turn based game.',
+        description: 'Um site de jogos online para jogar com os amigos, tem tabela de lideres, salva sua vitórias, tem lobby com bate-papo e um jogo baseado em turnos.',
+        english: 'A gaming site for playing with your friends, with leaderboard, victory counter, lobby, chat and turn based game.',
         technologies: ['ReactJS', 'Firebase', 'React-Router', 'Responsive'],
         github: 'https://github.com/CeloRocha/gaming-site',
         site: 'https://gaming-site-4e8d8.web.app/'
@@ -18,7 +19,8 @@ const projects = [
     {
         image: letMeAskImg,
         title: 'LetMe Ask',
-        description: 'A helpful site for answer the most desired questions during a stream.',
+        description: 'Um site para ajudar durante aulas online, criando uma sala onde os usuários podem fazer suas perguntas e marcarem como gostei as mais interessantes, nas quais o professor poderá responder a com mais alunos interessados.',
+        english: 'A helpful site for answer the most desired questions during a stream.',
         technologies: ['ReactJS', 'Firebase', 'React-Router'],
         github: 'https://github.com/CeloRocha/let-me-ask',
         site: 'https://let-me-ask-13098.web.app/'
@@ -26,7 +28,8 @@ const projects = [
     {
         image: quizAppImg,
         title: 'Quizzical',
-        description: 'Using the Open Trivia DB (OTDB), this site is my first ReactJS project, using a API to fecth data.',
+        description: 'Usando a API do Open Trivia DB (OTDB), foi o meu primeiro projeto com ReactJS, utilizando componentes e buscando dados online.',
+        english: 'Using the Open Trivia DB (OTDB), this site is my first ReactJS project, using a API to fecth data.',
         technologies: ['ReactJS', 'OTDB'],
         github: 'https://github.com/CeloRocha/react-quiz-app',
         site: 'https://celorocha.github.io/react-quiz-app/'
@@ -34,7 +37,8 @@ const projects = [
     {
         image: weatherAppImg,
         title: 'Weather Site',
-        description: 'This is a simple weather app, where you can search for the temperature, humidity and sky state.',
+        description: 'Um aplicativo simples para buscar o tempo atual em qualquer cidade, mostrando sua temperatura, humidade e o tempo.',
+        english: 'This is a simple weather app, where you can search for the temperature, humidity and sky state.',
         technologies: ['ReactJS', 'Open Weather', 'Responsive'],
         github: 'https://github.com/CeloRocha/weather-app',
         site: 'https://celorocha.github.io/weather-app/'
@@ -42,7 +46,8 @@ const projects = [
     {
         image: calculatorImg,
         title: 'Calculator',
-        description: 'This is a logic project, that appears to be simple in the first view, but can be somewhat complex, because this calculator solves equations with parenthesis and all operands considering the correct priority.',
+        description: 'Um projeto de lógica de programação, que pode parecer simples a primeira vista, mas apresenta vários desafios, pois essa calculadora resolve equações com parentesis e vários operandos, considerando a prioridade correta.',
+        english: 'This is a logic project, that appears to be simple in the first view, but can be somewhat complex, because this calculator solves equations with parenthesis and all operands considering the correct priority.',
         technologies: ['Javascript', 'Animation'],
         github: 'https://github.com/CeloRocha/calculator',
         site: 'https://celorocha.github.io/calculator/'
@@ -50,7 +55,8 @@ const projects = [
     {
         image: sketchImg,
         title: 'Etch a Sketch',
-        description: 'Draw your pixeled image, with this DOM manipulation project with only JS, HTML and CSS',
+        description: 'Desenhe sua imagem pixelada, com esse projeto visando a manipulação do DOM apenas com JS, HTML e CSS puros.',
+        english: 'Draw your pixeled image, with this DOM manipulation project with only JS, HTML and CSS',
         technologies: ['Javascript'],
         github: 'https://github.com/CeloRocha/Etch-a-Sketch',
         site: 'https://celorocha.github.io/Etch-a-Sketch/'

@@ -2,6 +2,7 @@
 
 
 .navbar{
+    position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -62,7 +63,51 @@
             transition: 0.5s ease;
         }
     }
-    
+    .nav-hamburguer{
+        display: none;
+        margin-right: 32px;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        border-top: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
+        height: 16px;
+        width: 16px;
+        transition: border 0.5s;
+
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 50%;
+            background-color: white;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+        &.open{
+            border: none;
+
+            &::before{
+                background-color: red;
+                transform: translate(-50%, -50%) rotateZ(45deg);
+
+            }
+            &::after{
+                background-color: red;
+                transform: translate(-50%, -50%) rotateZ(-45deg);
+            }
+        }
+    }
+
+    .nav-mobile{
+        display: none;
+        
+    }
     
 }
 
@@ -174,7 +219,7 @@ main{
     }
 }
 
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 961px){
     .section-1{
         flex-direction: column;
         gap: 32px;
@@ -182,5 +227,39 @@ main{
         .content{
             max-width: 70vw;
         }
+    }
+}
+
+@media only screen and (max-width: 641px){
+    .navbar{
+        position: fixed;
+        .change-mode-button{
+            margin-right: 0;
+        }
+        .nav-hamburguer{
+            display: block;
+        }
+        nav.nav-desktop{
+            display: none;
+        }
+        nav.nav-mobile{
+            display: flex;
+            flex-direction: column;
+            padding: 16px 0;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            background-color: rgba($color: $blue, $alpha: 0.9);
+            transform: translateX(100%);
+            transition: 1s;
+
+            &.open{
+                transform: translateX(0);
+            }
+        }
+    }
+    .section-1{
+        padding-top: 64px;
     }
 }
