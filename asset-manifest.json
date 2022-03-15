@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/official-portfolio/static/css/main.4496320f.css",
-    "main.js": "/official-portfolio/static/js/main.cd72323b.js",
+    "main.css": "/official-portfolio/static/css/main.665ea8ff.css",
+    "main.js": "/official-portfolio/static/js/main.c6f71d26.js",
     "static/media/Foto.jpg": "/official-portfolio/static/media/Foto.ab580117151fcdff856a.jpg",
     "static/media/calculator.jpg": "/official-portfolio/static/media/calculator.88a6e9b4e00ab9fc4954.jpg",
     "static/media/QuizApp.png": "/official-portfolio/static/media/QuizApp.b209fc762aae266d7420.png",
@@ -18,11 +18,11 @@
     "static/media/Linkedin.svg": "/official-portfolio/static/media/Linkedin.f6c23309e78849945a3d9dce42769c2f.svg",
     "static/media/Facebook.svg": "/official-portfolio/static/media/Facebook.0c8aaad64b7451ad06b4d0b5ba0abe76.svg",
     "index.html": "/official-portfolio/index.html",
-    "main.4496320f.css.map": "/official-portfolio/static/css/main.4496320f.css.map",
-    "main.cd72323b.js.map": "/official-portfolio/static/js/main.cd72323b.js.map"
+    "main.665ea8ff.css.map": "/official-portfolio/static/css/main.665ea8ff.css.map",
+    "main.c6f71d26.js.map": "/official-portfolio/static/js/main.c6f71d26.js.map"
   },
   "entrypoints": [
-    "static/css/main.4496320f.css",
-    "static/js/main.cd72323b.js"
+    "static/css/main.665ea8ff.css",
+    "static/js/main.c6f71d26.js"
   ]
 }
