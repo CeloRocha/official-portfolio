@@ -3,7 +3,6 @@ import './Project.scss'
 
 //Import images
 import githubImg from '../../assets/GitHub.svg';
-import seeOnlineImg from '../../assets/Desktop.svg';
 
 const Project = ({image, title, description, technologies, github, site, lightMode, className = ''}) => {
 

@@ -2,7 +2,6 @@ import React from 'react'
 import './About.scss'
 
 import marceloImg from '../../../../assets/Foto.jpg';
-import SectionTitle from '../../../../components/sectionTitle/SectionTitle';
 
 const About = (props) => {
   return (

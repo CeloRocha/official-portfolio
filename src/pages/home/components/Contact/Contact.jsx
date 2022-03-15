@@ -6,7 +6,6 @@ import './Contact.scss'
 import facebookImg from '../../../../assets/FacebookOutline.svg';
 import whatsappImg from '../../../../assets/Whatsapp.svg';
 import emailImg from '../../../../assets/Envelope.svg';
-import arrowRightImg from '../../../../assets/ArrowRight.svg';
 const Contact = (props) => {
 
     const form = useRef();
@@ -35,7 +34,7 @@ const Contact = (props) => {
                 <img src={emailImg} alt="" />
                 <h3>Email</h3>
                 <span>marcelo.ds.rocha77@gmail.com</span>
-                <a href="mailto:marcelo.ds.rocha77@gmail.com" target='_blank' referrerPolicy='no-referrer'>
+                <a href="mailto:marcelo.ds.rocha77@gmail.com" target='_blank' rel='noreferrer'>
                     Envie uma mensagem
                 </a>
             </div>
@@ -43,7 +42,7 @@ const Contact = (props) => {
                 <img src={whatsappImg} alt="" />
                 <h3>WhatsApp</h3>
                 <span>(12) 9 9769-8447</span>
-                <a href="https://api.whatsapp.com/send?phone=55012997698447" target='_blank' referrerPolicy='no-referrer'>
+                <a href="https://api.whatsapp.com/send?phone=55012997698447" target='_blank' rel='noreferrer'>
                 Envie uma mensagem
                 </a>
             </div>
@@ -51,7 +50,7 @@ const Contact = (props) => {
                 <img src={facebookImg} alt="" />
                 <h3>Messenger</h3>
                 <span>marcelo.rocha.33671</span>
-                <a href="https://m.me/marcelo.rocha.33671" target='_blank' referrerPolicy='no-referrer'>
+                <a href="https://m.me/marcelo.rocha.33671" target='_blank' rel='noreferrer'>
                     Envie uma mensagem
                 </a></div>
             </div>
