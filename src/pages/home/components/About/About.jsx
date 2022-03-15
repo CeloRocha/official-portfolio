@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.scss'
 
+import curriculo from '../../../../assets/document/Curriculo.pdf'
 import marceloImg from '../../../../assets/Foto.jpg';
 
 const About = (props) => {
@@ -37,7 +38,7 @@ const About = (props) => {
                     <button onClick={props.contactRef}>
                         Contrate-me
                     </button>
-                    <a href='../../../../document/Curriculo.pdf' download='Currículo_MarceloRocha.pdf'>
+                    <a href={curriculo} download='Currículo_MarceloRocha.pdf'>
                         <button className='orange'>
                             Currículo
                         </button>
