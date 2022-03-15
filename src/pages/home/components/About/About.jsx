@@ -7,7 +7,6 @@ import SectionTitle from '../../../../components/sectionTitle/SectionTitle';
 const About = (props) => {
   return (
     <div className={`about ${props?.lightMode ? 'light' : ''} ${props.className}`}>
-        <SectionTitle lightMode={props.lightMode} title='About Me' subtitle='Why Choose Me?' />
         <div className='about-box'>
             <aside>
                 <img src={marceloImg} alt="" />

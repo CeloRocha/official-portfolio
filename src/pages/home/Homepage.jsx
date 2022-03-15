@@ -1,6 +1,7 @@
 
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import './Homepage.scss'
+
 //Import Images
 import marceloImg from '../../assets/Foto.jpg'
 import emailImg from '../../assets/Envelope.svg';
@@ -16,19 +17,30 @@ import SectionTitle from '../../components/sectionTitle/SectionTitle';
 //Import projects helper ( array of objects)
 import projects from '../../helper/projects';
 import Project from '../../components/project/Project';
+import Experience from './components/Experience/Experience';
 
 const Homepage = (props) => {
 
-    const [ lightMode, setLightMode ] = useState(false)
+    const [ lightMode, setLightMode ] = useState(false);
+    const topRef = useRef();
+    const aboutRef = useRef();
+    const projectsRef = useRef();
+    const experiencesRef = useRef();
+    const contactRef = useRef();
+
+    function goToRef(ref){
+        ref.current.scrollIntoView({behavior: 'smooth'})
+    }
 
   return (
     <div className={`homepage ${lightMode ? 'light' : ''}`}>
-         <header className={`navbar ${lightMode ? 'light' : ''}`}>
+         <header ref={topRef} className={`navbar ${lightMode ? 'light' : ''}`}>
             <h1>Marcelo Rocha</h1>
             <nav>
-                <span>
-                    About
-                </span>
+                <button onClick={()=>goToRef(aboutRef)}>About</button>
+                <button onClick={()=>goToRef(projectsRef)}>Projects</button>
+                <button onClick={()=>goToRef(experiencesRef)}>Experience</button>
+                <button onClick={()=>goToRef(contactRef)}>Get In Touch</button>
             </nav>
             <button className='change-mode-button' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
         </header>
@@ -46,17 +58,12 @@ const Homepage = (props) => {
             </div>
         </section>
         <main>
-            <section>
-            
-            <About lightMode={lightMode} className='pt-5'/>
-            {/* <div class="wave">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-                    </svg>
-                </div> */}
+            <section className='pt-5'>
+                <SectionTitle reference={aboutRef} lightMode={lightMode} title='About Me' subtitle='Why Choose Me?' />
+                <About lightMode={lightMode}/>
             </section>
             <section className='projects-section pt-4'>
-                <SectionTitle lightMode={lightMode} title='Projects' />
+                <SectionTitle reference={projectsRef} lightMode={lightMode} title='Projects' />
                 <div className='projects'>
                     {projects.map((project, index) => {
                         return(
@@ -66,6 +73,13 @@ const Homepage = (props) => {
                         )
                     })}
                 </div>
+            </section>
+            <section className='pt-4'>
+                <SectionTitle reference={experiencesRef} lightMode={lightMode} title='Experiência' />
+                <Experience lightMode={lightMode} />
+            </section>
+            <section className='pt-4'>
+                <SectionTitle reference={contactRef} lightMode={lightMode} title='Entre em Contato' />
             </section>
         </main>
     </div>

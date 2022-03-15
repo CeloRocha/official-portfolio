@@ -15,10 +15,30 @@
 
     h1{
         margin-left: 32px;
-        font-family: 'Inter', 'Georgia', sans-serif;
+        font-family: 'Inter', 'Georgia', 'Times New Roman', Times, serif;
         color: $text-color;
+        font-weight: 700;
     }
 
+    nav{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        button{
+            color: $text-color;
+            background-color: transparent;
+            border: 0;
+            font-weight: 600;
+            padding: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover{
+                transform: scale(1.2);
+                color: $light-subtitle-color;
+            }
+        }
+    }
     .change-mode-button{
         position: relative;
         width: 48px;
@@ -126,16 +146,25 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    section{
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        align-items: center;
+    }
 }
 
+
 .projects-section{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap:32px;
-    align-items: center;
+    
 
     .projects{
+        width: 90vw;
         display: flex;
         align-items: stretch;
         justify-content: space-around;
@@ -145,28 +174,7 @@ main{
     }
 }
 
-.wave {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(133% + 1.3px);
-    height: 245px;
-}
-
-.wave .shape-fill {
-    fill: $blue;
-}
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 640px){
     .section-1{
         flex-direction: column;
         gap: 32px;

@@ -1,0 +1,70 @@
+@import '../../../../styles/colors';
+
+.experiences{
+    padding: 32px 0;
+    width: 60vw;
+    display: flex;
+    border-radius: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    box-shadow: 0 0 15px 3px #000;
+    color: $text-color;
+    background-color: $background-color;
+
+    .experience{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 85%;
+        gap: 8px;
+        text-align: justify;
+        font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+        h3{
+            position: relative;
+            color: $subtitle-color;
+            font-size: 24px;
+            font-weight: 600;
+            &::before{
+                content: '';
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+                background-color: $subtitle-color;
+                transform: translate(-20px, 6px);
+            }
+        }
+        span{
+            padding: 8px;
+            font-weight: 500;
+            background-color: $blue;
+            color: $text-color;
+            border-radius: 999px;
+        }
+    }
+}
+
+.experiences.light{
+
+    color: $light-text-color;
+    background-color: $light-background-color;
+
+    .experience{
+        h3{
+            color: $light-subtitle-color;
+
+            &::before{
+                background-color: $light-subtitle-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .experiences{
+        width: 95%;
+    }
+}
