@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/official-portfolio/static/css/main.4496320f.css",
+    "main.js": "/official-portfolio/static/js/main.471a40e2.js",
+    "static/media/Foto.jpg": "/official-portfolio/static/media/Foto.ab580117151fcdff856a.jpg",
+    "static/media/calculator.jpg": "/official-portfolio/static/media/calculator.88a6e9b4e00ab9fc4954.jpg",
+    "static/media/QuizApp.png": "/official-portfolio/static/media/QuizApp.b209fc762aae266d7420.png",
+    "static/media/WeatherApp.png": "/official-portfolio/static/media/WeatherApp.efa30fe4ff1b9ab8315d.png",
+    "static/media/CramsGames.png": "/official-portfolio/static/media/CramsGames.2b9a92559f3a8c90e33a.png",
+    "static/media/sketchImage.png": "/official-portfolio/static/media/sketchImage.71e4c5363eb689bd1196.png",
+    "static/media/LetMeAsk.png": "/official-portfolio/static/media/LetMeAsk.e785906615d531a400f4.png",
+    "static/media/Instagram.svg": "/official-portfolio/static/media/Instagram.a12e20aee6927587a5727174f6a84de4.svg",
+    "static/media/GitHub.svg": "/official-portfolio/static/media/GitHub.7892b83a840e71806fcba4846d43f033.svg",
+    "static/media/Whatsapp.svg": "/official-portfolio/static/media/Whatsapp.bb0b0304c19155e840b86443fa94e63e.svg",
+    "static/media/FacebookOutline.svg": "/official-portfolio/static/media/FacebookOutline.85c00f37234771f29294d165359fa3f9.svg",
+    "static/media/Envelope.svg": "/official-portfolio/static/media/Envelope.11eaa0a58e0203d486e22a0e939405f8.svg",
+    "static/media/Linkedin.svg": "/official-portfolio/static/media/Linkedin.f6c23309e78849945a3d9dce42769c2f.svg",
+    "static/media/Facebook.svg": "/official-portfolio/static/media/Facebook.0c8aaad64b7451ad06b4d0b5ba0abe76.svg",
+    "index.html": "/official-portfolio/index.html",
+    "main.4496320f.css.map": "/official-portfolio/static/css/main.4496320f.css.map",
+    "main.471a40e2.js.map": "/official-portfolio/static/js/main.471a40e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4496320f.css",
+    "static/js/main.471a40e2.js"
+  ]
+}
