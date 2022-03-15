@@ -1,10 +1,6 @@
 import React from 'react';
 import './Experience.scss';
 
-//Import Images
-import equipeImg from '../../../../assets/blackbee.png';
-import logoImg from '../../../../assets/logoBlackBee.png';
-
 
 //Import experiences helper
 import experiences from '../../../../helper/experiences';

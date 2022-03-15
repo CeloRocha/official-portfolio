@@ -14,23 +14,35 @@ const About = (props) => {
             <div className='about-info'>
                 <div className='about-content'>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odit debitis molestias cumque alias itaque eaque et aspernatur, tempora placeat quae ipsum expedita ad voluptatum illum, quod delectus suscipit aliquam.
+                        Curso Engenharia de Controle e Automação, porém durante o curso
+                        descobri por várias matérias e por participar na área de Software
+                        em um projeto de extensão da faculdade, descobri amar programar,
+                        desenvolver algo novo e solucionar problemas.
+                        Por isso além de buscar cursar todas matérias opcionais relacionadas
+                        na faculdade, também estudo muito por fora, utilizando sites como
+                        TheOdinProject e FreeCodeProgram (que são iniciativas incríveis).
+                        Portanto, busco aprender e me desenvolver enquanto procuro por oportunidades
+                        de adquirir experiência.
                     </p>
-                    <span className='space'>Here a few highlights:</span>
+                    <span className='space'>Alguns destaques:</span>
                     <ul>
                         <li>Javascript;</li>
-                        <li>CSS, SASS;</li>
-                        <li>React;</li>
+                        <li>Python;</li>
+                        <li>Web: HTML, CSS, SASS;</li>
+                        <li>ReactJS;</li>
+                        <li>GitHub</li>
                         <li>Firebase.</li>
                     </ul>
                 </div>
                 <div className='about-buttons'>
-                    <button>
-                        Hire me
+                    <button onClick={props.contactRef}>
+                        Contrate-me
                     </button>
-                    <button className='orange'>
-                        Get resume
-                    </button>
+                    <a href='../../../../document/Curriculo.pdf' download='Currículo_MarceloRocha.pdf'>
+                        <button className='orange'>
+                            Currículo
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

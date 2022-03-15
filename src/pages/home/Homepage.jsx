@@ -2,23 +2,16 @@
 import {useState, useRef} from 'react';
 import './Homepage.scss'
 
-//Import Images
-import marceloImg from '../../assets/Foto.jpg'
-import emailImg from '../../assets/Envelope.svg';
-import facebookImg from '../../assets/Facebook.svg';
-import githubImg from '../../assets/GitHub.svg';
-import instagramImg from '../../assets/Instagram.svg';
-import linkedinImg from '../../assets/Linkedin.svg'
 import About from './components/About/About';
 import Profile from '../../components/profile/Profile';
 import SectionTitle from '../../components/sectionTitle/SectionTitle';
+import Project from '../../components/project/Project';
+import Experience from './components/Experience/Experience';
+import Contact from './components/Contact/Contact';
 
 
 //Import projects helper ( array of objects)
 import projects from '../../helper/projects';
-import Project from '../../components/project/Project';
-import Experience from './components/Experience/Experience';
-import Contact from './components/Contact/Contact';
 
 const Homepage = (props) => {
 
@@ -55,7 +48,7 @@ const Homepage = (props) => {
                 <button onClick={()=>goToRef(aboutRef)}>Sobre</button>
                 <button onClick={()=>goToRef(projectsRef)}>Projetos</button>
                 <button onClick={()=>goToRef(experiencesRef)}>Experiência</button>
-                <button onClick={()=>goToRef(contactRef)}>Entre em Contato</button>
+                <button onClick={()=>goToRef(contactRef)}>Contate-me</button>
             </nav>
         </header>
         <section className='section-1' ref={topRef}>
@@ -64,20 +57,22 @@ const Homepage = (props) => {
             </aside>
             <div className='content'>
                 <h2>
-                    Seja Bem Vindo Ao Meu Portfólio
+                    Olá! Seja Bem Vindo e Sinta-se em Casa
                 </h2>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora illo, inventore pariatur dolores quam aliquid culpa optio qui saepe delectus architecto esse nobis nisi facilis. Nobis explicabo mollitia soluta? Culpa.
+                    Meu nome é Marcelo, sou um estudante na Universidade Federal de Itajubá.
+                    E meu maior problema é querer ter muitos hobbys: tocar teclado,
+                    jogar, me exercitar, escutar música, ler, jogos de tabuleiro...
                 </p>
             </div>
         </section>
         <main>
             <section className='pt-5'>
-                <SectionTitle reference={aboutRef} lightMode={lightMode} title='About Me' subtitle='Why Choose Me?' />
-                <About lightMode={lightMode}/>
+                <SectionTitle reference={aboutRef} lightMode={lightMode} title='Sobre mim' subtitle='Apenas um pouco.' />
+                <About lightMode={lightMode} contactRef={()=>goToRef(contactRef)}/>
             </section>
             <section className='projects-section pt-4'>
-                <SectionTitle reference={projectsRef} lightMode={lightMode} title='Projects' />
+                <SectionTitle reference={projectsRef} lightMode={lightMode} title='Projetos' />
                 <div className='projects'>
                     {projects.map((project, index) => {
                         return(
@@ -89,11 +84,11 @@ const Homepage = (props) => {
                 </div>
             </section>
             <section className='pt-4'>
-                <SectionTitle reference={experiencesRef} lightMode={lightMode} title='Experiência' />
+                <SectionTitle reference={experiencesRef} lightMode={lightMode} title='Experiência' subtitle='E formação.' />
                 <Experience lightMode={lightMode} />
             </section>
             <section className='pt-4'>
-                <SectionTitle reference={contactRef} lightMode={lightMode} title='Entre em Contato' />
+                <SectionTitle reference={contactRef} lightMode={lightMode} title='Contate-me' subtitle='E falo sério.'/>
                 <Contact lightMode={lightMode}/>
             </section>
         </main>
