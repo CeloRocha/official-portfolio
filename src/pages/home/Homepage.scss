@@ -230,11 +230,16 @@ main{
     }
 }
 
-@media only screen and (max-width: 641px){
+@media only screen and (max-width: 800px){
     .navbar{
         position: fixed;
         .change-mode-button{
             margin-right: 0;
+            
+            &.mobile{
+                display: none;
+            }
+        
         }
         .nav-hamburguer{
             display: block;

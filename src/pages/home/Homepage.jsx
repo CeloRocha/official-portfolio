@@ -41,7 +41,7 @@ const Homepage = (props) => {
                 <button onClick={()=>goToRef(experiencesRef)}>Experiência</button>
                 <button onClick={()=>goToRef(contactRef)}>Contate-me</button>
             </nav>
-            <button className='change-mode-button' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
+            <button className='change-mode-button mobile' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
             <button className={`nav-hamburguer ${mobileNavOpened ? 'open' : ''}`} onClick={()=>setMobileNavOpened(prev => !prev)}></button>
             <nav className={`nav-mobile ${mobileNavOpened ? 'open' : ''}`}>
                 <button onClick={()=>goToRef(topRef)}>Início</button>
@@ -49,6 +49,7 @@ const Homepage = (props) => {
                 <button onClick={()=>goToRef(projectsRef)}>Projetos</button>
                 <button onClick={()=>goToRef(experiencesRef)}>Experiência</button>
                 <button onClick={()=>goToRef(contactRef)}>Contate-me</button>
+                <button className='change-mode-button' onClick={()=>setLightMode(prevMode => !prevMode)}></button>
             </nav>
         </header>
         <section className='section-1' ref={topRef}>
