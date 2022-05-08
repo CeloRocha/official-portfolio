@@ -5,8 +5,18 @@ import quizAppImg from '../assets/projectImages/QuizApp.png';
 import weatherAppImg from '../assets/projectImages/WeatherApp.png';
 import calculatorImg from '../assets/projectImages/calculator.jpg';
 import sketchImg from '../assets/projectImages/sketchImage.png';
+import ToDoImg from '../assets/projectImages/ToDo.png';
 
 const projects = [
+    {
+        image: ToDoImg,
+        title: 'Lista de Tarefas',
+        description: 'Um site de lista de tarefas, utilizando testes unitários em seu desenvolvimento, contém animações, clicar e arrastar, criação, remoção, edição e marcar tarefas como completas.',
+        english: 'A To-Do-List website, using TDD for unit tests, creating a beautiful task manager, that can create, remove, edit and complete tasks, it have animations and drag and drop.',
+        technologies: ['ReactJS', 'Jest', 'TDD', 'Responsive', 'Framer-Motion','Drag&Drop','Context'],
+        github: 'https://github.com/CeloRocha/Teste-SelfSolutions',
+        site: 'https://celorocha.github.io/Teste-SelfSolutions/'
+    },
     {
         image: cramsGamesImg,
         title: 'Crams Games',
